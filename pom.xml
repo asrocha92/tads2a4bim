@@ -10,5 +10,15 @@
 		<maven.compile.source>1.8</maven.compile.source>
 		<maven.compile.target>1.8</maven.compile.target>
 	</properties>
-
+	
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2-mvstore</artifactId>
+			<version>1.4.190</version>
+		</dependency>
+	</dependencies>
+	
+	
 </project>
