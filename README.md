@@ -5,7 +5,7 @@
 # Tecnologia em análise e desenvolvimento de sistemas
 
 2 Ano, $ Bimestre - 2015
-[Univel](http://www.univel.com.br)
+[Univel](http://www.univel.br/)
 
 * Criação de Repositório.
 * Criação de Projeto.
