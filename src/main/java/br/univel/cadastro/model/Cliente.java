@@ -8,6 +8,22 @@ public class Cliente {
 	private String cidade;
 	private Uf uf;
 
+	public Cliente(int id, String nome, String endereco, String telefone,
+			String cidade, Uf uf) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.cidade = cidade;
+		this.uf = uf;
+	}
+	
+	public Cliente(int id){
+		super();
+		this.id = id;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -54,6 +70,13 @@ public class Cliente {
 
 	public void setUf(Uf uf) {
 		this.uf = uf;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente[ " + this.nome + ", " + this.endereco + ", "
+				+ this.telefone + ", " + this.cidade + ", " + this.uf.getNome()
+				+ "]\n";
 	}
 
 }
