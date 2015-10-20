@@ -12,11 +12,11 @@
 
 # 15 de outubro de 2015
 
-*criação do projeto JasperSimple
+* criação do projeto JasperSimple
 
 # 20 de outubro de 2015
 
-*relatório simplesReport
-*relatório simplesPDF
-*relatório simplesJDBC- com MySql
+* relatório simplesReport
+* relatório simplesPDF
+* relatório simplesJDBC- com MySql
 
