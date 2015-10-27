@@ -24,4 +24,5 @@
 
 * criando tela de login
 * criação do modelo AbstractPanel
+* configurando a tela cliente
 

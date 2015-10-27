@@ -8,7 +8,7 @@ public class TelaCadastroCliente extends ModuraAbstrata {
 	 * Create the panel.
 	 */
 	public TelaCadastroCliente() {
-
+		super();
 	}
 
 	@Override

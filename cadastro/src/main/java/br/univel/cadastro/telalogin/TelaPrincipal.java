@@ -26,6 +26,8 @@ public class TelaPrincipal extends JFrame {
 			public void run() {
 				try {
 					TelaPrincipal frame = new TelaPrincipal();
+					frame.setLocationRelativeTo(null);
+					frame.setExtendedState(MAXIMIZED_BOTH);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,7 +52,7 @@ public class TelaPrincipal extends JFrame {
 		JMenuItem mntmCliente = new JMenuItem("Cliente");
 		mntmCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				tabbedPane.addTab("Cadastro de Cliente ", new TelaCadastroCliente());
+				abrirTela();
 			}
 		});
 		mnCadastro.add(mntmCliente);
@@ -62,5 +64,26 @@ public class TelaPrincipal extends JFrame {
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
 	}
+	
+	public void abrirTela() {		
+		
+		TelaCadastroCliente telaCadastroCliente = new TelaCadastroCliente();
+		telaCadastroCliente.setCloseAction(e -> tabbedPane.remove(telaCadastroCliente));
+		tabbedPane.addTab("Cadastro de Cliente ", telaCadastroCliente);
+		
+		
+		//linhas de código abaixo faz a mesma coisa que as linhas de codigo superior 
+//		TelaCadastroCliente telaCadastroCliente2 = new TelaCadastroCliente();			
+//		ActionListener a = new ActionListener() {
+//			public void actionPerformed(ActionEvent e) {
+//				tabbedPane.remove(telaCadastroCliente2);
+//			}			
+//		};		
+//		telaCadastroCliente2.setCloseAction(a);		
+//		tabbedPane.addTab("Cadastro de Cliente ", telaCadastroCliente2);
+		
+	}
+	
+	
 
 }
