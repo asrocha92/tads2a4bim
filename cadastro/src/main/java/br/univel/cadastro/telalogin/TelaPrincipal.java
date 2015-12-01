@@ -62,6 +62,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.setLayout(new BorderLayout(0, 0));
 		
 		tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+		tabbedPane.setBorder(null);
 		contentPane.add(tabbedPane, BorderLayout.CENTER);
 	}
 	
@@ -74,13 +75,13 @@ public class TelaPrincipal extends JFrame {
 		
 		//linhas de código abaixo faz a mesma coisa que as linhas de codigo superior 
 //		TelaCadastroCliente telaCadastroCliente2 = new TelaCadastroCliente();			
-//		ActionListener a = new ActionListener() {
-//			public void actionPerformed(ActionEvent e) {
-//				tabbedPane.remove(telaCadastroCliente2);
-//			}			
-//		};		
-//		telaCadastroCliente2.setCloseAction(a);		
-//		tabbedPane.addTab("Cadastro de Cliente ", telaCadastroCliente2);
+		ActionListener a = new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.remove(telaCadastroCliente);
+			}			
+		};		
+		telaCadastroCliente.setCloseAction(a);		
+		tabbedPane.addTab("Cadastro de Cliente ", telaCadastroCliente);
 		
 	}
 	

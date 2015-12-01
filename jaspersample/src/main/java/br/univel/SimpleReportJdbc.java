@@ -1,4 +1,5 @@
 package br.univel;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,10 +15,11 @@ public class SimpleReportJdbc {
 	private String arq = "C:\\Users\\Alex\\JaspersoftWorkspace\\MyReports\\simplesJDBC.jasper";
 
 	public SimpleReportJdbc() throws SQLException {
-		
+
 		JasperPrint jasperPrint = null;
 		try {
-			jasperPrint = JasperFillManager.fillReport(arq, null, getConnection());
+			jasperPrint = JasperFillManager.fillReport(arq, null,
+					getConnection());
 			JasperViewer jasperViewer = new JasperViewer(jasperPrint);
 			jasperViewer.setVisible(true);
 		} catch (JRException ex) {
@@ -26,22 +28,22 @@ public class SimpleReportJdbc {
 	}
 
 	private Connection getConnection() throws SQLException {
-		String driverName = "com.mysql.jdbc.Driver";                        
+		String driverName = "com.mysql.jdbc.Driver";
 
 		try {
 			Class.forName(driverName);
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		String url = "jdbc:mysql://192.168.101.10/employees";
 		String user = "jasper";
 		String pass = "jasper";
-		
+
 		return con = DriverManager.getConnection(url, user, pass);
 	}
 
-	public static void main(String[] args) throws SQLException {
-		new SimpleReportJdbc();
-	}
+	// pra teste
+	// public static void main(String[] args) throws SQLException {
+	// new SimpleReportJdbc();
+	// }
 }

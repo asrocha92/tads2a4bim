@@ -1,12 +1,17 @@
 package br.univel.cadastro.telalogin;
 
 import javax.swing.JPanel;
+
 import java.awt.GridBagLayout;
+
 import javax.swing.JLabel;
+
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+
 import java.awt.Dimension;
 
 public class MioloCadastroCliente extends JPanel {
@@ -142,7 +147,6 @@ public class MioloCadastroCliente extends JPanel {
 		gbc_label.gridx = 0;
 		gbc_label.gridy = 7;
 		add(label, gbc_label);
-
 	}
 
 }
